@@ -36,6 +36,7 @@ export async function updateProfile(profile) {
 
 export async function getProfile(id) {
     // > Part B: get profile by id, maybe single row returned
+    return await client.from('profiles').select().match({ id }).maybeSingle();
 }
 
 export async function getProfiles() {
