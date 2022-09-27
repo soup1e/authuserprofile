@@ -3,7 +3,9 @@ export function renderProfile(profile, userId) {
     li.classList.add('profile');
     // > Part D: conditionally add "self" class to li if
     // this profile belongs to the current user
-
+    if (profile.id === userId) {
+        li.classList.add('self');
+    }
     const userNameEl = document.createElement('h2');
     userNameEl.textContent = profile.user_name;
 
